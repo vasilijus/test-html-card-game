@@ -1,11 +1,11 @@
 
 draw_set_colour(c_black);
-draw_text( 100, 200, string(mouse_x) + " " +string(mouse_y));
+draw_text( 35, 55, "Mouse pos. \nx: " +string(mouse_x) + " y: " + string(mouse_y));
 
 for(i=0; i< deckCount; i++)
 {
 	if(deck[i] > 0) {
-		draw_sprite(sprite_array[deck[i]], -1, deck_x-.4*i, deck_y-106-.4*i);	
+		draw_sprite(sprite_array[deck[i]], -1, deck_x-.4*i, deck_y-.4*i);	
 	}
 }
 
@@ -20,3 +20,11 @@ for(i=0; i< deckCount; i++)
 //		}
 //	}
 //}
+
+//############################################################################################
+//ERROR in action number 1
+//of Draw Event for object obj_hand:
+//Variable <unknown_object>.sprite_array(100011, 1) not set before reading it.
+//at gml_Object_obj_hand_Draw_0
+//############################################################################################
+//gml_Object_obj_hand_Draw_0 (line -1)

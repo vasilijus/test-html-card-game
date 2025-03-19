@@ -1,7 +1,7 @@
 // Deck x coords
-deck_x = 589;
+deck_x = 600;
 // Deck y coords
-deck_y = 612;
+deck_y = 615;
 
 // Card dimension width / height
 card_width = 76;
@@ -35,13 +35,8 @@ deckCount = i;
 
 i = 0;
 
-sprite_array[i++]= spr_cardback;
-sprite_array[i++]= spr_drapian;
-sprite_array[i++]= spr_enamorus;
-sprite_array[i++]= spr_gallade;
-sprite_array[i++]= spr_perrser;
-sprite_array[i++]= spr_rotom;
-
 #macro CARDMAX i
+
+scr_init_spr_arr()
 
 i = 0;
