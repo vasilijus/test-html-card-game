@@ -1,3 +1,5 @@
+#macro MAXHAND 8
+
 card_width = 76;
 card_height = 106;
 
@@ -12,11 +14,11 @@ for(i=0; i< 8; i++)
 
 i = 0;
 
-hand[i++] = 1;
-hand[i++] = 2;
-hand[i++] = 3;
-hand[i++] = 4;
-hand[i++] = 5;
+//hand[i++] = 1;
+//hand[i++] = 2;
+//hand[i++] = 3;
+//hand[i++] = 4;
+//hand[i++] = 5;
 
 handCount = i;
 
