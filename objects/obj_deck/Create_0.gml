@@ -3,6 +3,9 @@ deck_x = 600;
 // Deck y coords
 deck_y = 615;
 
+card_sprite = "";
+face_up= 1;
+	
 // Card dimension width / height
 card_width = 76;
 card_height=106;
