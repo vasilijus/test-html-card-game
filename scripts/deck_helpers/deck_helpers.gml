@@ -22,17 +22,26 @@ function scr_shuffle_deck(){
 	return;
 }
 
-
+/// @function src_draw;
+/// @param number: string
+/// @return void
 function src_draw(number) {
 	var num = number;
 	
 	//conditions to not draw a card
-	if (deckCount - num < 0) { return; }
-	
-	if (obj_hand.handCount == MAXHAND )  { return; }
+	if (deckCount - num < 0) { return; } 
+	if (handCount == MAXHAND )  { return; }
 	
 	for ( i =0; i < num; i++ ) {
-		obj_hand.hand[obj_hand.handCount++] = deck[--deckCount];
+		deckCount--;
+		hand[handCount] = deck[deckCount];
+		handCount++;
 		deck[deckCount] = 0; 
+		handCard[handCount - 1] = instance_create_depth(deck_x, deck_y, -handCount - 2, obj_card);
+		with(handCard[handCount - 1]) {
+			card_drawn = true;
+			hand_position = player.handCount - 1;
+			cardNum = player.hand[hand_position];
+		}
 	}
 }
